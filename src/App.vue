@@ -64,7 +64,7 @@ export default {
       const newTodo = { ...todo, id };
 
       this.todos = [...this.todos, newTodo];
-      Bugfender.log(`Added a TODO with id ${todo.id}, and name ${todo.name}`);
+      Bugfender.log(`Added a TODO with id ${id}, and name ${todo.name}`);
     },
     deleteTodo(id) {
       this.todos = this.todos.filter(

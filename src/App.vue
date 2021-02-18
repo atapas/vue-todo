@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="small-container">
+    <send-feedback class="sendFeedback"/>
     <h1>Bugfender TODO</h1>
     <todo-form @add:todo="addTodo" />
     <todo-table 
@@ -7,7 +8,7 @@
       @delete:todo="deleteTodo" 
       @edit:todo="editTodo" />
     <br />
-    <send-feedback />
+    
   </div>
 </template>
 
@@ -96,6 +97,12 @@ button {
   color: #FFFFFF;
   padding: 5px;
   border-radius: 4px;
+}
+
+.sendFeedback {
+  position: absolute;
+  top:10px;
+  right: 30px;
 }
 
 .small-container {

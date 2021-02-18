@@ -98,6 +98,7 @@ button {
   color: #FFFFFF;
   padding: 5px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .sendFeedback {

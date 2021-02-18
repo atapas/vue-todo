@@ -60,22 +60,23 @@ export default {
   },
   methods: {
     addTodo(todo) {
-      Bugfender.log('From the vue app', todo);
-     
       const id = generate();
       const newTodo = { ...todo, id };
 
       this.todos = [...this.todos, newTodo];
+      Bugfender.log(`Added a TODO with id ${todo.id}, and name ${todo.name}`);
     },
     deleteTodo(id) {
       this.todos = this.todos.filter(
         todo => todo.id !== id
       )
+      Bugfender.log(`Deleted a TODO with id ${id}`);
     },
     editTodo(id, updatedTodo) {
       this.todos = this.todos.map(todo =>
         todo.id === id ? updatedTodo : todo
       )
+      Bugfender.log(`Updated a TODO with id ${updatedTodo.id}, and name ${updatedTodo.name}`);
     }
   },
 };
